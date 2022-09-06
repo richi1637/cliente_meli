@@ -1,5 +1,4 @@
-import React,{useState} from "react";
-import {getItems} from './../helpers/itemsFetch';
+import React,{useState,useEffect,useRef} from "react";
 import logoMeli from './../assets/Logo_ML.png';
 import searchIcon from './../assets/ic_Search.png';
 
@@ -16,6 +15,11 @@ esta propiedad me indica cual es el componente que disparo el evento (e.target )
 
 const SearchBar = () => {
     
+    const searchInputRef = useRef(null);
+
+    useEffect(()=>{
+        searchInputRef.current.focus();
+    }, []);
     
     const [inputValue, setInputValue] = useState('');
     
@@ -29,28 +33,30 @@ const SearchBar = () => {
         window.location = `/items?q=${query}`;
     }
 
-   
+    
+
     return(
-        <div className="Container">
-            
+        <div className="Container">            
             <div>
-            <img
-            src={logoMeli}
-            className="header__logo"
-            alt="logo Mercado Libre"
-            />
-            <form id="form-search" role="form" className="search" onSubmit={submitForm}>
-            <input
-                className="search input"
-                placeholder="Nunca dejes de buscar"
-                type='search'
-                value={inputValue}
-                onChange={changeInput}
-            />
-            <button type="submit" className="button">
-                <img src={searchIcon} alt="Boton buscar" />
-            </button>
-            </form>
+                <img
+                src={logoMeli}
+                className="header__logo"
+                alt="logo Mercado Libre"
+                tabIndex={-1}
+                />
+                <form id="form-search" role="form" tabIndex={0} className="search" onSubmit={submitForm}>
+                    <input tabIndex={1} 
+                        className="search input" 
+                        placeholder="Nunca dejes de buscar" 
+                        type='search' 
+                        value={inputValue} 
+                        ref={searchInputRef}
+                        onChange={changeInput}
+                    />
+                    <button type="submit" className="button" tabIndex={2}>
+                        <img src={searchIcon} alt="Boton buscar" />
+                    </button>
+                </form>
             </div>
         </div>
     )

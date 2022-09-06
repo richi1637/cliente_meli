@@ -1,0 +1,129 @@
+/*
+  * {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+  }
+*/
+  .body-content {
+    padding: 50px;
+    width: 60%;
+    margin: 0% auto;    
+  }
+  
+  .breadcrumb {
+    position: relative;
+    float: left;
+    padding: 16 0;
+    color: #999999;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 28px;
+    box-sizing: border-box;
+  }
+  
+  .product-body {
+    /*display: inline-flex;*/
+    /*border: 1px rgb(89, 0, 255) solid;*/
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .product-image {
+    position: relative;
+    /*border: 1px red solid;  */
+    width: 30%;
+    height: 30%;
+    float: left;
+  }
+  
+  .product-resume {
+    padding: 100px;
+    /*border: 1px red solid;*/
+    width: 70%;
+    height: 30%;
+    float: right;
+  }
+  
+  .product-resume p small {
+    padding: 0 4px;
+  }
+  
+  .product-title {
+    margin: 12px;
+    font-size: 36px;
+  
+  }
+  
+  .product-resume__h2 {
+    font-size: 36px;
+    margin: 10px;
+  }
+  
+  
+  
+  
+  .product-description{
+    /*align-items: center;*/
+    /*padding: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border: 1px red solid;*/
+    /*display: flex;*/
+    /*flex-flow: row;*/
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    float:left;
+    /*border: 1px red solid;*/
+    white-space: inherit;
+    padding: 32px 12px, 16px 8px;
+
+  }
+  
+  .description__h3 {
+    padding: 10px;
+    font-size: 28px;
+    
+  }
+  
+  
+  .description__p {
+    font-size: 16px;
+    padding-bottom: 32px;
+    color: #333333;
+    white-space: pre;
+  }
+
+  
+
+
+.product-resume__button {
+  font-size: 20px;
+  border-radius: 4px;
+  background: #3483FA;
+  padding: 20px;
+
+  border: 0;
+  color: #FFF;
+  width: 200px;
+  cursor: pointer;
+}
+
+
+
+li { 
+  margin: 0 10px; 
+  display: inline; 
+}
+ul { 
+  list-style: none outside none; 
+  margin:0; 
+  padding: 10px; 
+  text-align: left; 
+}

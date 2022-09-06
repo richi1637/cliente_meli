@@ -1,0 +1,57 @@
+.product {
+    display: inline-flex;
+    margin-top: 12px;
+    margin-left: 64px;
+    padding: 36;
+    position: relative;
+    width: 85%;
+    color: rgb(110, 104, 104);
+    flex-direction: row;    
+    flex-grow: 10;
+    text-align: left;
+}
+
+  .product > .thumbnail {
+    padding-right: 16;
+    width: 180px;
+    height: 180px;    
+  }
+
+  .product > .thumbnail > .img {
+    margin-top: 10px !important;
+    height: 100%;
+    border: 10px solid #000;
+  }
+
+  .price {
+    color: #000;
+    font-size: 16px !important;
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-weight: 900 !important;
+    float: left;
+  }
+
+  .free_shipping{
+    float: right;
+  }
+
+  .city {
+    top: 300px;
+    right: 300px;
+    color: #999999;
+    font-size: 12px;
+    top: 0;
+    right: 32px;
+    margin-right: 32px;
+    word-wrap:normal;
+    text-align: right;
+    float: right;
+  } 
+
+  .title
+  {
+    font-size: 16px;
+    color: #000 !important;
+    float:right;
+  }

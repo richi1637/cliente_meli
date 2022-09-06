@@ -1,0 +1,9 @@
+.productList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    margin-left: 32px;
+    margin-right: 32px;
+    background-color: #EEEEEE;    
+  }
+

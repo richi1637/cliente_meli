@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: #000;
+    font-weight: inherit;
+}
+
+html{
+    height: 100%;
+    min-height: 100%;
+    background-color: #ededed;    
+}
+
+body {
+    font-size: 18px;
+    border: 0px;
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+*, button, input
+{
+    border: 0;
+    background-color: none;
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}

@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react";
 import { useParams } from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs';
+import './ProductDetail-grid.css';
 import './ProductDetail.css';
 
 const ProductDetail = () => {
@@ -51,58 +52,80 @@ const ProductDetail = () => {
             console.log(error);
         }
     }
-
-  return (    
-    
-    <section key={detail.datos.id}>
-       
-        <section className="breadcrumb">
-            {detail.categorias ? (
-                <Breadcrumbs
-                  categories={detail.categorias}
-                />
-              ) : ''
-            }    
-        </section>
-        <div className="body-content">
-            <div className="product-body">
-                <div className="product-image" >
-                    <img
-                        src={detail.datos.picture}
-                    alt="Imagen del Producto"
-                        title={detail.datos.title}
-                    />
-                </div>           
-                <div className="product-resume">
-                    <p className="product-title">
-                        {detail.datos.title}
-                    </p>                    
-                    <h2 className="product-resume__h2">
-                        <span>
-                        {
-                            detail.precio.toLocaleString('es-ar',
-                            {style: 'currency', 
-                            currency: 'ARS', 
-                            minimumFractionDigits: 2
-                            })
-                        }
-                        </span>                        
-                    </h2>
-                    
-                    <button type="button" className="product-resume__button">
-                        Comprar
-                    </button>
-                </div> 
-                <div className="product-description">
-                    <h3 className="description__h3">Descripción del producto</h3>
-                    <p className="description__p">
-                        {detail.datos.description}
-                    </p>
-                
-                </div>
+/*
+<footer>
+        <div className="description">
+            <code className="identifier"><pre>.description</pre></code>
+            <div className="product-description">
+            <p className="description__p">
+                            {detail.datos.description}
+            </p>
             </div>
         </div>
-    </section>
+        <div className="none">
+            <code className="identifier"><pre>.none</pre></code>
+        </div>
+    </footer>
+*/
+  return (    
+    
+    <div className="container">
+
+        <header className="breadcrumb">
+            {detail.categorias ? (
+                    <Breadcrumbs
+                    categories={detail.categorias}
+                    />
+                ) : ''
+            }
+        </header>
+
+        <div className="product-img">
+            <div className="img-product-detail">
+                <img
+                                src={detail.datos.picture}
+                            alt="Imagen del Producto"
+                                title={detail.datos.title}
+                />
+            </div>
+        </div>
+
+        <main id="content" className="main">
+            <div className="product-resume">
+                        <p className="product-title">
+                            <strong>{detail.datos.title}</strong>
+                        </p>                    
+                        <h2 className="product-resume__h2">
+                            <span>
+                            {
+                                detail.precio.toLocaleString('es-ar',
+                                {style: 'currency', 
+                                currency: 'ARS', 
+                                minimumFractionDigits: 2
+                                })
+                            }
+                            </span>                        
+                        </h2>                        
+                        <button type="button" className="product-resume__button">
+                            Comprar
+                        </button>
+            </div>
+        </main>
+        
+        <div className="description">
+            <h3 className="description__h3">
+                Descripción del producto
+            </h3>
+            <p className="description__p">
+                {detail.datos.description}
+            </p>
+        </div>
+
+        <div className="none">
+
+        </div>
+    
+    </div>
   )
 }
 
